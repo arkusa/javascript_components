@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <title>drop Test</title>
+  <script src="./src/index.js"></script>
+  <style>
+    .demo-wrap {
+      display: inline-block;
+      position: relative;
+
+      width: 400px;
+      height: 400px;
+      border: 1px solid gray;
+      vertical-align: top;
+    }
+
+    .demo-wrap p {
+      font-size: 14px;
+      margin: 3px 0;
+    }
+
+    .demo-theme {
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .finish-line {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: black;
+    }
+
+    .start {
+      position: absolute;
+      top: 100px;
+      right: 50px;
+    }
+
+    .start::after {
+      position: absolute;
+      bottom: 0;
+      display: block;
+
+      content: '';
+      width: 10px;
+      height: 1px;
+      background-color: black;
+    }
+
+    .end {
+      position: absolute;
+      left: 100px;
+
+      width: 1px;
+      height: 10px;
+      margin-top: -10px;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <section class="demo-wrap" id="demo1">
+      <h2 class="demo-theme">缓动曲线</h2> 
+      <div class="text-wrap">
+        <p class="text">起点坐标: </p>
+        <p class="text">终点坐标: </p>
+        <p class="text">缓动函数(X): </p>
+        <p class="text">缓动函数(Y): </p>
+      </div>
+      <div class="start"></div>
+      <div class="finish-line">
+        <div class="end"></div>
+      </div>
+    </section>
+
+    <section class="demo-wrap" id="demo2">
+      <h2 class="demo-theme">缓动曲线(抛物线)</h2> 
+      <p class="text">起点坐标: </p>
+      <p class="text">终点坐标: </p>
+      <p class="text">缓动函数(X): </p>
+      <p class="text">缓动函数(Y): </p>
+      <p class="text">抛物线: </p>
+      <div class="start"></div>
+      <div class="finish-line">
+        <div class="end"></div>
+      </div>
+    </section>
+  </div>
+  <div>
+    <section class="demo-wrap" id="demo3">
+      <h2 class="demo-theme">运动模型(Y回弹)</h2> 
+      <div class="text-wrap">
+        <p class="text">起点坐标: </p>
+        <p class="text">终点坐标: </p>
+      </div>
+      <div class="start"></div>
+      <div class="finish-line">
+        <div class="end"></div>
+      </div>
+    </section>
+
+    <section class="demo-wrap" id="demo4">
+      <h2 class="demo-theme">运动模型(Y回弹, X匀减速)</h2> 
+      <p class="text">起点坐标: </p>
+      <p class="text">终点坐标: </p>
+      <div class="start"></div>
+      <div class="finish-line">
+        <div class="end"></div>
+      </div>
+    </section>
+  </div>
+  <script src="./test/index.js"></script>
+</body>
+</html>
